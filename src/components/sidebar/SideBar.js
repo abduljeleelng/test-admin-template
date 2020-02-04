@@ -37,39 +37,39 @@ const SideBar = props => (
     [
       {
         title: "All Payment",
-        target: "Home-1",
+        target: "/",
         icon:faBriefcase
       },
       {
         title: "Reconciled Payment",
-        target: "Home-2", 
+        target: "/", 
         icon:faAlignLeft     
       },
       {
         title: "UnReconciled Payment",
-        target: "Home-3",   
+        target: "/",   
         icon:faReceipt  
       },
       {
         title: "Manual Settlement",
-        target: "Home-4", 
+        target: "/", 
         icon:faReceipt   
       }
     ],
     [
       {
         title: "all orders",
-        target: "Page-1",  
+        target: "/",  
         icon:faListAlt       
       },
       {
         title: "Pending Orders",
-        target: "Page-2",  
+        target: "/",  
         icon:faListAlt    
       },
       {
         title: "Reconciled Orders",
-        target: "Page-2",
+        target: "/",
         icon:faListAlt       
       }
     ]

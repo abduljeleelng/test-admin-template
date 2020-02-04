@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import {Container,Row,Col,Card,CardBody,CardText,CardTitle} from 'reactstrap';
+import {Container,Row,Col,Card,Progress} from 'reactstrap';
 import TB from '../components/TableList/TB';
-
-
-
+import { LineChart, PieChart } from 'react-chartkick'
+import 'chart.js'
 
 
 export default class Home extends Component {
@@ -522,8 +521,14 @@ export default class Home extends Component {
           "extn": "4226"
         }
       ]
+
+     dataChart = [
+        {"name":"Successful Transaction", "data": {"2020-02-01":100,"2020-02-03":20, "2020-02-02": 4,"2020-02-04":20,"2020-02-05":40,"2020-02-01":70,"2020-02-08":90,"2020-02-07":60,"2020-02-06":50,}},
+        {"name":"failled Transaction", "data": {"2020-02-01":30, "2020-02-03": 50,"2020-02-02":40, "2020-02-04":10,}}
+      ]
     
     render() {
+      
         return (
             <Container>
                 <Row>
@@ -545,27 +550,31 @@ export default class Home extends Component {
                     </Col>
                 </Row>
                  <Row>
-                     <Col md="8" style={{backgroundColor:"#FFF",color:"#000", borderRadius:10,}}>
-                          Hello
+                     <Col md="8" style={{backgroundColor:"#FFF",color:"#000", borderRadius:10,marginTop:10}}>
+                     <LineChart data={this.dataChart} />
                     </Col>
-                     <Col md="4"  style={{backgroundColor:"#FFF",color:"#000", borderRadius:10,}}>
-                         <Card>
-                             <CardTitle>
-
-                             </CardTitle>
-                             <CardBody>
-                                 <CardText>
-                                     Details
-                                 </CardText>
-                             </CardBody>
+                     <Col md="4" >
+                         <Card  style={{backgroundColor:"#FFF",color:"#000", borderRadius:10,marginTop:10,padding:10}}>
+                        
+                                 <h4>Orders</h4>
+                                 <Progress multi>
+                                    <Progress bar color="success" value="70" />
+                                    <Progress bar color="warning" value="30" />
+                                </Progress>
+                                <span>Pending order : 30%</span>
+                                <span> Reconcilled Order : 70%</span>
+                                <span> Total : 100% </span>
+                              
                          </Card>
-                         <Card>
-                             <CardTitle>
-
-                             </CardTitle>
-                             <CardBody>
-                                 Hello
-                             </CardBody>
+                         <Card  style={{backgroundColor:"#FFF",color:"#000", borderRadius:10,borderRadius:10,marginTop:10,padding:10}}>
+                             <h4>Payment</h4>
+                             <Progress multi>
+                                    <Progress bar color="success" value="70" />
+                                    <Progress bar color="warning" value="30" />
+                                </Progress>
+                                <span> un-Reconcilled payment : <span color="warning">30%</span></span>
+                                <span> Reconcilled payment : <span color="success">70%</span></span>
+                                <span> Total Payment : 100% </span>
                          </Card>
                      </Col>
                  </Row>

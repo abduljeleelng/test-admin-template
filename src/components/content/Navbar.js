@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAlignLeft,faBell,faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Navbar, Button, NavbarToggler, Collapse, Nav, NavItem, NavLink,Badge,Form,Row,Col,FormGroup,Input } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import abduljeleel from '../../asset/img/abduljeleelNG.jpg'
+
 
 export default props => {
 
@@ -23,7 +23,7 @@ export default props => {
       <Row form>
         <Col md={8}>
           <FormGroup>
-            <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+            <Input type="email" name="email" id="exampleEmail" placeholder=" Search... " />
           </FormGroup>
           </Col>
           <Col md={4}>
@@ -44,7 +44,7 @@ export default props => {
             <NavLink tag={Link} to={'/'}><FontAwesomeIcon icon={faBell}/> <Badge color="secondary">8</Badge></NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} to={'/'}>Oluwaleke Ojo <img src={require("../../asset/img/abduljeleelNG.jpg")} style={{width:'20px',height:'20px'}} /> </NavLink>
+            <NavLink tag={Link} to="/"> Oluwaleke Ojo <img src={require("../../asset/img/abduljeleelNG.jpg")} alt="profile Image" style={{width:'20px',height:'20px'}} /> </NavLink>
           </NavItem>
       </Nav>
       </Collapse>

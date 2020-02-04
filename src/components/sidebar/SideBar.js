@@ -46,7 +46,7 @@ const SideBar = props => (
         icon:faAlignLeft     
       },
       {
-        title: "Un - Reconciled Payment",
+        title: "UnReconciled Payment",
         target: "Home-3",   
         icon:faReceipt  
       },

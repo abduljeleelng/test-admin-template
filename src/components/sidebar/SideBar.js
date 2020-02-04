@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faBriefcase, faPaperPlane, faQuestion, faImage, faCopy,faAlignLeft } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faBriefcase, faReceipt, faCopy,faAlignLeft, faUser,faListAlt } from '@fortawesome/free-solid-svg-icons';
 import SubMenu from './SubMenu';
 import { NavItem, NavLink, Nav } from 'reactstrap';
 import classNames from 'classnames';
@@ -21,21 +21,11 @@ const SideBar = props => (
               <FontAwesomeIcon icon={faBriefcase} className="mr-2"/> Overviw
             </NavLink>
           </NavItem>
-          <SubMenu title="payment" icon={faHome} items={submenus[0]} />
+          <SubMenu title="payment" icon={faHome} items={submenus[0]}/>
           <SubMenu title="Orders" icon={faCopy} items={submenus[1]}/>
           <NavItem>
-            <NavLink tag={Link} to={'/pages'}>
-              <FontAwesomeIcon icon={faImage} className="mr-2"/>Portfolio
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink tag={Link} to={'/faq'}>
-              <FontAwesomeIcon icon={faQuestion} className="mr-2"/>FAQ
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink tag={Link} to={'/contact'}>
-              <FontAwesomeIcon icon={faPaperPlane} className="mr-2"/>Contact
+            <NavLink tag={Link} to={'/'}>
+              <FontAwesomeIcon icon={faUser} className="mr-2"/> Merchant Profile
             </NavLink>
           </NavItem>
         </Nav>        
@@ -58,29 +48,29 @@ const SideBar = props => (
       {
         title: "Un - Reconciled Payment",
         target: "Home-3",   
-        icon:"faAlignLeft"  
+        icon:faReceipt  
       },
       {
         title: "Manual Settlement",
         target: "Home-4", 
-        icon:"faAlignLeft"    
+        icon:faReceipt   
       }
     ],
     [
       {
         title: "all orders",
         target: "Page-1",  
-        icon:"faAlignLeft"       
+        icon:faListAlt       
       },
       {
         title: "Pending Orders",
         target: "Page-2",  
-        icon:"faAlignLeft"    
+        icon:faListAlt    
       },
       {
         title: "Reconciled Orders",
         target: "Page-2",
-        icon:"faAlignLeft"       
+        icon:faListAlt       
       }
     ]
   ]

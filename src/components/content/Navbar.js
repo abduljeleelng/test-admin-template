@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAlignLeft } from '@fortawesome/free-solid-svg-icons';
-import { Navbar, Button, NavbarToggler, Collapse, Nav, NavItem, NavLink } from 'reactstrap';
+import { faAlignLeft,faBell,faSearch } from '@fortawesome/free-solid-svg-icons';
+import { Navbar, Button, NavbarToggler, Collapse, Nav, NavItem, NavLink,Badge,Form,Row,Col,FormGroup,Input } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import abduljeleel from '../../asset/img/abduljeleelNG.jpg'
 
 export default props => {
 
@@ -10,7 +11,7 @@ export default props => {
   const toggle = () => setOpen(!isOpen)
   
   return (
-    <Navbar color="light" light className="navbar shadow-sm p-3 mb-5 bg-white rounded" expand="md">
+    <Navbar color="info" light className="navbar shadow-sm p-3 mb-5 bg-white rounded" expand="md">
       <Button color="info" onClick={props.toggle}>
         <FontAwesomeIcon icon={faAlignLeft}/>
       </Button>
@@ -18,16 +19,32 @@ export default props => {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink tag={Link} to={'/page-1'}>page 1</NavLink>
+          <Form>
+      <Row form>
+        <Col md={8}>
+          <FormGroup>
+            <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+          </FormGroup>
+          </Col>
+          <Col md={4}>
+          <FormGroup>
+            <Button color="info"> <FontAwesomeIcon icon={faSearch}/></Button>
+          </FormGroup>
+          </Col>
+        </Row>
+        </Form>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} to={'/page-2'}>page 2</NavLink>
+            <NavLink tag={Link} to={'/'}>Support</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} to={'/page-3'}>page 3</NavLink>
+            <NavLink tag={Link} to={'/'}>Faq </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} to={'/page-4'}>page 4</NavLink>
+            <NavLink tag={Link} to={'/'}><FontAwesomeIcon icon={faBell}/> <Badge color="secondary">8</Badge></NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} to={'/'}>Oluwaleke Ojo <img src={require("../../asset/img/abduljeleelNG.jpg")} style={{width:'20px',height:'20px'}} /> </NavLink>
           </NavItem>
       </Nav>
       </Collapse>

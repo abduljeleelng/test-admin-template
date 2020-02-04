@@ -44,7 +44,7 @@ export default props => {
             <NavLink tag={Link} to={'/'}><FontAwesomeIcon icon={faBell}/> <Badge color="secondary">8</Badge></NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} to="/"> Oluwaleke Ojo <img src={require("../../asset/img/abduljeleelNG.jpg")} alt="profile Image" style={{width:'20px',height:'20px'}} /> </NavLink>
+            <NavLink tag={Link} to="/"> Oluwaleke Ojo <img src={require("../../asset/img/abduljeleelNG.jpg")} alt="..." style={{width:'20px',height:'20px'}} /> </NavLink>
           </NavItem>
       </Nav>
       </Collapse>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Container,Row,Col,Card,Progress} from 'reactstrap';
 import TB from '../components/TableList/TB';
-import { LineChart, PieChart } from 'react-chartkick'
-import 'chart.js'
+import { LineChart } from 'react-chartkick';
+import 'chart.js';
 
 
 export default class Home extends Component {
@@ -523,7 +523,7 @@ export default class Home extends Component {
       ]
 
      dataChart = [
-        {"name":"Successful Transaction", "data": {"2020-02-01":100,"2020-02-03":20, "2020-02-02": 4,"2020-02-04":20,"2020-02-05":40,"2020-02-01":70,"2020-02-08":90,"2020-02-07":60,"2020-02-06":50,}},
+        {"name":"Successful Transaction", "data": {"2020-02-01":100,"2020-02-03":20, "2020-02-02": 4,"2020-02-04":20,"2020-02-05":40,"2020-02-10":70,"2020-02-08":90,"2020-02-07":60,"2020-02-06":50,}},
         {"name":"failled Transaction", "data": {"2020-02-01":30, "2020-02-03": 50,"2020-02-02":40, "2020-02-04":10,}}
       ]
     
@@ -566,7 +566,7 @@ export default class Home extends Component {
                                 <span> Total : 100% </span>
                               
                          </Card>
-                         <Card  style={{backgroundColor:"#FFF",color:"#000", borderRadius:10,borderRadius:10,marginTop:10,padding:10}}>
+                         <Card  style={{backgroundColor:"#FFF",color:"#000", borderRadius:10,marginTop:10,padding:10}}>
                              <h4>Payment</h4>
                              <Progress multi>
                                     <Progress bar color="success" value="70" />

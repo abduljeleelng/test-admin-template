@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faBriefcase, faPaperPlane, faQuestion, faImage, faCopy } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faBriefcase, faPaperPlane, faQuestion, faImage, faCopy,faAlignLeft } from '@fortawesome/free-solid-svg-icons';
 import SubMenu from './SubMenu';
 import { NavItem, NavLink, Nav } from 'reactstrap';
 import classNames from 'classnames';
@@ -22,7 +22,7 @@ const SideBar = props => (
             </NavLink>
           </NavItem>
           <SubMenu title="payment" icon={faHome} items={submenus[0]} />
-          <SubMenu title="Pages" icon={faCopy} items={submenus[1]}/>
+          <SubMenu title="Orders" icon={faCopy} items={submenus[1]}/>
           <NavItem>
             <NavLink tag={Link} to={'/pages'}>
               <FontAwesomeIcon icon={faImage} className="mr-2"/>Portfolio
@@ -47,29 +47,40 @@ const SideBar = props => (
     [
       {
         title: "All Payment",
-        target: "Home-1"
+        target: "Home-1",
+        icon:faBriefcase
       },
       {
         title: "Reconciled Payment",
-        target: "Home-2",        
+        target: "Home-2", 
+        icon:faAlignLeft     
       },
       {
         title: "Un - Reconciled Payment",
-        target: "Home-3",      
+        target: "Home-3",   
+        icon:"faAlignLeft"  
       },
       {
         title: "Manual Settlement",
-        target: "Home-4",      
+        target: "Home-4", 
+        icon:"faAlignLeft"    
       }
     ],
     [
       {
-        title: "Page 1",
-        target: "Page-1",          
+        title: "all orders",
+        target: "Page-1",  
+        icon:"faAlignLeft"       
       },
       {
-        title: "Page 2",
-        target: "Page-2",        
+        title: "Pending Orders",
+        target: "Page-2",  
+        icon:"faAlignLeft"    
+      },
+      {
+        title: "Reconciled Orders",
+        target: "Page-2",
+        icon:"faAlignLeft"       
       }
     ]
   ]

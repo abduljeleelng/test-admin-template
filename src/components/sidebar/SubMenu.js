@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import  { Collapse, NavItem, NavLink } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
@@ -10,6 +9,7 @@ const SubMenu = props => {
   const [collapsed, setCollapsed] = useState(true)
   const toggleNavbar = () => setCollapsed(!collapsed)
   const { icon, title, items } = props;
+  console.log(items);
  
   return (
     <div>
@@ -22,7 +22,7 @@ const SubMenu = props => {
         {items.map((item, index) => (
             <NavItem key={index} className="pl-4">
               <NavLink tag={Link} to={item.target}>
-              <FontAwesomeIcon icon={faBriefcase} className="mr-2"/> {item.title}
+              <FontAwesomeIcon icon={item.icon} className="mr-2"/> {item.title}
               </NavLink>
             </NavItem>
             ))}

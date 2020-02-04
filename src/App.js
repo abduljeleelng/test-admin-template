@@ -6,7 +6,6 @@ import Content from './components/content/Content';
 import { BrowserRouter as Router } from "react-router-dom";
 
 export default () => {
-
   const [isOpen, setOpen] = useState(true)
   const toggle = () => setOpen(!isOpen)
 
